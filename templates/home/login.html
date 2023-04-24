@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/assets/css/login.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic&family=Bruno+Ace&family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic&family=Bruno+Ace&family=Quicksand:wght@300;400;500;600;700&family=Raleway:ital,wght@0,100;0,200;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital@1&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital@1&family=Sigmar&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Sigmar&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@200&family=Lobster&family=Sigmar&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Kanit:wght@200&family=Lobster&family=Sigmar&display=swap" rel="stylesheet">
+    <title>login</title>
+</head>
+<body>
+    <nav>
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">AGPT</a>
+        </div>
+    </nav>
+    <main>
+        <div class="container">
+            <div class="main__img-container">
+                <img class="welcome-back__img" src="https://img.freepik.com/free-vector/welcome-word-flat-cartoon-people-characters_81522-4207.jpg?w=1380&t=st=1667629748~exp=1667630348~hmac=7640379886faf703c2a57790e69b26352cbde4e28dcadf46cacf670a81333884" alt="">
+            </div>
+            <div class="main__content-container"><!-- right side -->
+                <div class="content-heading">
+                    <h1 class="main__content-heading">Welcome Back :)</h1>
+                </div>
+                <div class="main__content-para">
+                    <p class="main__content-para">In order to select categories you must<br> login with your valid username and password</p>
+                </div>
+                <!-- main place -->
+                <div class="main__form-container">
+                    <div class="forms">
+                        <div class="form login">
+                            <span class="title">Login</span>
+                            <form action="/mainlogin" method='POST'>
+                                {%csrf_token%}
+                                <div class="input-field">
+                                    <input type="text" placeholder="Enter your email" name='emaill' required>
+                                    <i class="uil uil-envelope icon"></i>
+                                </div>
+                                <div class="input-field">
+                                    <input type="password" class="password" placeholder="Enter your password" 
+                                    name='passwordd' required>
+                                    <i class="uil uil-lock icon"></i>
+                                    <i class="uil uil-eye-slash showHidePw"></i>
+                                </div>
+            
+            
+                                <div class="input-field button">
+                                    <input type="submit" value="Login">
+                                </div>
+                            </form>
+            
+                            <div class="login-signup">
+                                <span class="text">Not a member?
+                                    <a href="/signup" class="text signup-link">Signup Now</a>
+                                </span>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="../../static/assets/js/script.js" /></script>
+</body>
+</html>

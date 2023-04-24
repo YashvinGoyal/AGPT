@@ -21,7 +21,10 @@ def cat(request):
     return render(request,'home/Categories.html')
 
 def log(request):
-    return render(request,'home/login2.html')
+    return render(request,'home/login.html')
+
+def signup(request):
+    return render(request,'home/sign_up.html')
 
 def loginn(request):
      if request.method=='POST':
@@ -31,48 +34,49 @@ def loginn(request):
         pass2=request.POST['cnfpassword']
         
         #check for user details.
-        if User.objects.filter(username=username).first():
-            messages.error(request,"Username already exists !!")
-            return redirect('home')
+        # if User.objects.filter(username=username).first():
+            # messages.error(request,"Username already exists !!")
+            # return redirect('home')
         
         if User.objects.filter(email=email).first():
-            messages.error(request,"Email already registered  !!")
+            # messages.error(request,"Email already registered  !!")
             return redirect('home')
         
-        if len(username)>10:
-            messages.error(request,"username must be less than 10 char")
+        if len(username)>20:
+            # messages.error(request,"username must be less than 10 char")
             return redirect('home')
         
-        if not username.isalnum() :
-            messages.error(request,"username sholud contain letters and numbers only")
-            return redirect('home')
+        # if not username.isalnum() :
+        #      messages.error(request,"username sholud contain letters and numbers only")
+        #     return redirect('home')
         
         if pass1 !=pass2:
-            messages.error(request,"password donot match")
+            # messages.error(request,"password donot match")
             return redirect('home')
         
         myuser=User.objects.create_user(username,email,pass1)
         myuser.save()
         # mesages.success(request,"You have sucessfully login")
-        #return redirect('choose') this will call choose and choose will redirect it to home as choose is returing home 
-        return render(request,'home/login2.html') 
+        #return redirect('choose') this will call choose and choose will redirect it to home as choose is returing home
+        print("yaha pahuche") 
+        return redirect("log")  
     
      else:
         return HttpResponse("404-NOT FOUND")
     
 def mainlogin(request) :
     if request.method=='POST':
-        loginame=request.POST['emaill']
+        username=request.POST['emaill']
         loginpass=request.POST['passwordd']
-        user=authenticate(username=loginame,password=loginpass)
+        user=authenticate(username=username,password=loginpass)
         if user is not None:
             login(request,user)
-            # messages.success(request,"sucefully login")
+            messages.success(request,"sucefully login")
             return render(request,'home/Categories.html')  
         
         else:
-            # messages.error(request,"invalid crenditals")
-            return render(request,'home/login2.html')
+            messages.error(request,"invalid crenditals")
+            return render(request,'home/login.html')
     else:
         return HttpResponse("404-ERROR")    
 
