@@ -48,8 +48,13 @@
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
+          {% if user.is_authenticated %}
+          <li><a class="nav-link scrollto" href="/cat">Categories</a></li>
+          {%else%}
           <li><a class="nav-link scrollto" href="#categories">Categories</a></li>
+          {%endif%}
           <li><a class="nav-link scrollto" href="#testimonials">Testimonials</a></li>
+          <li><a class="nav-link scrollto" href="/feedback">Feedback</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
           {% if user.is_authenticated %}
           <ul class="navbar-nav mr-2">

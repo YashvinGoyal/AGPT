@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect,HttpResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login,logout
-from home.models import catgories
+from home.models import catgories,feedback,filesys
 from django.contrib import messages
 import json
 import requests
@@ -15,7 +15,17 @@ summarizer=pipeline("summarization")
 def home(request):
     return render(request,'home/home.html')
 
-def feedback(request):
+def feedbackk(request):
+    if request.method=='POST':
+        name=request.POST['name']
+        email=request.POST['email']
+        phone=request.POST['phone']
+        content=request.POST['message']
+        
+        feed=feedback(name=name,email=email,phone=phone,content=content)
+        feed.save()
+        return redirect('home')
+        
     return render(request,'home/feedback.html')
 def cat(request):
     return render(request,'home/Categories.html')
@@ -95,7 +105,8 @@ def choose(request):
       technology=request.POST.get('technology','off')
       entertainment=request.POST.get('entertainment','off')
       tradeandprofessional=request.POST.get('trade','off')
-      
+      daily=request.POST.get('daily','off')
+      weekley=request.POST.get('weekely','off')
     #   catty=catgories(user=user,sports=sports,healthandmedicine=healthandmedicine,education=education,technology=technology,entertainment=entertainment,tradeandprofessional=tradeandprofessional)
     #   catty.save()
       caty={'sports':sports,'healthandmedicine':healthandmedicine,'education':education,'technology':technology,' entertainment': entertainment,'tradeandprofessional':tradeandprofessional} 
@@ -124,7 +135,15 @@ def choose(request):
       if tradeandprofessional=="on":
         obj.tradeandprofessional=True
         obj.save()
-    
+        
+      if daily=="on":
+        obj.daily=True
+        obj.save()
+        
+      if weekley=="on":
+        obj.weekely=True
+        obj.save()  
+        
       obj.save()
     print("function call ke phele")    
     mlinfo(request)

@@ -11,6 +11,6 @@ urlpatterns = [
     path('cat',views.cat,name='cat'),
     path('log',views.log,name='log'),
     path('signup',views.signup,name='signup'),
-    path('feedback',views.feedback,name='feedback'),
+    path('feedback',views.feedbackk,name='feedback'),
  
 ]

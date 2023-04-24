@@ -51,7 +51,7 @@
   <body>
     <nav>
       <div class="navbar__container">
-        <a href="" id="navbar__logo">AGPT</a>
+        <a href="/" id="navbar__logo">AGPT</a>
       </div>
     </nav>
     <div class="container">
@@ -110,7 +110,7 @@
           <span class="circle one"></span>
           <span class="circle two"></span>
 
-          <form action="/feedback" method="POST" autocomplete="off">
+          <form action="/feedback" method="POST" autocomplete="off"> {% csrf_token %}
             <h3 class="title">Contact us</h3>
             <div class="input-container">
               <input type="text" name="name" class="input" />
