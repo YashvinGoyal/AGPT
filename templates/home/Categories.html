@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>categories</title>
+    <!-- <link rel="stylesheet" href="static/assests/css/category.css" /> -->
+    <link rel="stylesheet" href="../../static/assets/css/category.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic&family=Bruno+Ace&family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic&family=Bruno+Ace&family=Quicksand:wght@300;400;500;600;700&family=Raleway:ital,wght@0,100;0,200;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital@1&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital@1&family=Sigmar&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Sigmar&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@200&family=Lobster&family=Sigmar&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+        <nav>
+        <div class="navbar__container">
+            <a href="/" id="navbar__logo">AGPT</a>
+        </div>
+        </nav>
+        
+        <form action="/categories" method="post" role="form"> {% csrf_token %}
+        <div class="grid-container">
+            <div class="card">
+                <h2 class="category--heading">Sports</h2>
+                <p class="spacing">This category covers all news related to sports events, matches, scores, and updates from the world of sports. It also includes interviews, profiles, and analysis of sports teams and players, as well as feature stories on major sports events and tournaments</p>
+                <div class="checkboxCustom">
+                <div class="check">
+                    <input id="sports" name="sports" type="checkbox">
+                    <label for="sports-checkbox"></label>
+                </div>
+                </div>
+            </div>
+
+            
+            <div class="card">
+                <h2>Health</h2>
+                <p>This category includes news related to health, medicine, and wellness, such as breakthroughs in medical research, new treatments, and public health issues. It also covers lifestyle topics related to health, such as fitness, nutrition, and mental health.</p>
+                <div class="checkboxCustom">
+                <div class="check">
+                    <input id="health" name="health" type="checkbox">
+                    <label for="health-checkbox"></label>
+                </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2>Education</h2>
+                <p>This category covers news related to education and learning, including updates on schools and universities, curriculum changes, educational policies, and academic achievements.</p>
+                <div class="checkboxCustom">
+                <div class="check">
+                    <input id="education" name="education" type="checkbox">
+                    <label for="education-checkbox"></label>
+                </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2>Technology</h2>
+                <p>This category covers news related to technology and innovation, including new gadgets, software, and digital tools. It also includes stories on tech companies, startups, and emerging technologies, as well as coverage of internet culture and social media.</p>
+                <div class="checkboxCustom">
+                <div class="check">
+                    <input id="technology" type="checkbox">
+                    <label for="technology-checkbox"></label>
+                </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2>Entertainment</h2>
+                <p>This category covers news related to movies, TV shows, music, and celebrity gossip. It includes reviews of new releases, interviews with actors and musicians, and behind-the-scenes looks at the entertainment industry.</p>
+                <div class="checkboxCustom">
+                <div class="check">
+                    <input id="entertainment" type="checkbox">
+                    <label for="entertainment-checkbox"></label>
+                </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2>Trade</h2>
+                <p>This category covers news related to business and finance, including updates on the stock market, corporate mergers and acquisitions, and economic trends. It also includes coverage of international trade and global markets, as well as stories on entrepreneurship and small business.</p>
+                <div class="checkboxCustom">
+                <div class="check">
+                    <input id="trade" type="checkbox">
+                    <label for="trade-checkbox"></label>
+                </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2>Cricket</h2>
+                <p>This category covers news related to cricket, including updates on matches, scores, and player performance. It also includes analysis and commentary on major tournaments and events, as well as profiles of cricketers and teams.</p>
+                <div class="checkboxCustom">
+                <div class="check">
+                    <input id="cricket-checkbox" type="checkbox">
+                    <label for="cricket-checkbox"></label>
+                </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2>Football</h2>
+                <p>This category covers news related to football (also known as soccer in some countries), including updates on matches, scores, and player performance. It also includes analysis and commentary on major tournaments and events, as well as profiles of footballers and teams.</p>
+                <div class="checkboxCustom">
+                <div class="check">
+                    <input id="football-checkbox" type="checkbox">
+                    <label for="football-checkbox"></label>
+                </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2>Celebrity</h2>
+                <p>This category covers news related to celebrities, including updates on their personal lives, career milestones, and public appearances. It also includes stories on fashion, beauty, and lifestyle topics related to the entertainment industry.</p>
+                <div class="checkboxCustom">
+                <div class="check">
+                    <input id="celebrity-checkbox" type="checkbox">
+                    <label for="celebrity-checkbox"></label>
+                </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2>Astronomy</h2>
+                <p> This category covers news related to astronomy and space exploration, including updates on the latest discoveries, missions, and space technology. It also includes coverage of astronomy-related events and astronomy education.</p>
+                <div class="checkboxCustom">
+                <div class="check">
+                    <input id="astronomy-checkbox" type="checkbox">
+                    <label for="astronomy-checkbox"></label>
+                </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Politics</h2>
+                <p> This category contains the latest news and updates from the world of politics, covering everything from domestic policies to international relations. Stay informed about the latest developments along with the facts and figures from the political landscape.</p>
+                <div class="checkboxCustom">
+                <div class="check">
+                    <input id="politics-checkbox" type="checkbox">
+                    <label for="politics-checkbox"></label>
+                </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Business</h2>
+                <p> This category contains the latest news and updates from the world of business, including corporate news, stock market updates, and industry analysis. Stay up-to-date with the latest trends and developments in the business world, with in-depth coverage and expert insights.</p>
+                <div class="checkboxCustom">
+                <div class="check">
+                    <input id="business:-checkbox" type="checkbox">
+                    <label for="business:-checkbox"></label>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="frequency--box">
+            <div class="frequency-section">
+                <h3>Select News Frequency</h3>
+                <label><input type="radio" name="frequency" value="daily"> Daily</label>
+                <label><input type="radio" name="frequency" value="thrice-weekly"> Thrice a Week</label>
+                <label><input type="radio" name="frequency" value="weekly"> Weekly</label>
+                {% csrf_token %}
+                <button class="button" role="button">Confirm</button>
+            </div>
+        </div>
+
+      </form>
+
+  </body>
+</html>

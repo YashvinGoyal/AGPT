@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="../../static/assets/css/feedback.css"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic&family=Bruno+Ace&family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic&family=Bruno+Ace&family=Quicksand:wght@300;400;500;600;700&family=Raleway:ital,wght@0,100;0,200;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital@1&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital@1&family=Sigmar&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Sigmar&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@200&family=Lobster&family=Sigmar&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav>
+      <div class="navbar__container">
+        <a href="" id="navbar__logo">AGPT</a>
+      </div>
+    </nav>
+    <div class="container">
+      <span class="big-circle"></span>
+      <img src="../../../hacktu/static/assets/img/imgak1.png" class="square" alt="" />
+      <div class="form">
+        <div class="feedback-info">
+          <h3 class="title">Let's get in touch</h3>
+          <p class="text">
+            At AGPT, we strive to provide the best experience possible for our
+            users. Your feedback helps us improve and make our website even
+            better. We value your opinion and want to hear from you. By sharing
+            your thoughts, you can help us understand what we're doing well and
+            where we can make improvements. So please take a few moments to
+            provide us with your valuable feedback. We appreciate your time and
+            look forward to hearing from you!
+          </p>
+
+          <div class="info">
+            <div class="information">
+              <img src="../../static/assets/img/imgak3.png" class="icon" alt="" />
+              <p>WC-504, Hostel-J, Thapar University</p>
+            </div>
+            <div class="information">
+              <img src="../../static/assets/img/imgak4.png" class="icon" alt="" />
+              <p>bhavya.2k03@gmail.com</p>
+            </div>
+            <div class="information">
+              <img src="../../static/assets/img/imgak2.png" class="icon" alt="" />
+              <p>8278-672172</p>
+            </div>
+          </div>
+
+          <div class="social-media">
+            <p>Connect with us :</p>
+            <div class="social-icons">
+              <a
+                href="https://www.facebook.com/campaign/landing.php?campaign_id=14884913640&extra_1=s%7Cc%7C589460569849%7Cb%7Cfacebook%20%27%7C&placement=&creative=589460569849&keyword=facebook%20%27&partner_id=googlesem&extra_2=campaignid%3D14884913640%26adgroupid%3D128696220912%26matchtype%3Db%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-327195741349%26loc_physical_ms%3D9301263%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=CjwKCAjw0ZiiBhBKEiwA4PT9z53atcwVhqch-bUMLROMoDYP-R5R2wnCDQ_HJ7mtO671AYgIhmidrRoCPSYQAvD_BwE"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://twitter.com/i/flow/login">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="https://www.instagram.com/">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://www.linkedin.com/home">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="feedback-form">
+          <span class="circle one"></span>
+          <span class="circle two"></span>
+
+          <form action="/feedback" method="POST" autocomplete="off">
+            <h3 class="title">Contact us</h3>
+            <div class="input-container">
+              <input type="text" name="name" class="input" />
+              <label for="">Name</label>
+              <span>Name</span>
+            </div>
+            <div class="input-container">
+              <input type="email" name="email" class="input" />
+              <label for="">Email</label>
+              <span>Email</span>
+            </div>
+            <div class="input-container">
+              <input type="tel" name="phone" class="input" />
+              <label for="">Phone</label>
+              <span>Phone</span>
+            </div>
+            <div class="input-container textarea">
+              <textarea name="message" class="input"></textarea>
+              <label for="">Feedback</label>
+              <span>Feedback</span>
+            </div>
+            <input type="submit" value="Send" class="btn" />
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="./../../static/assets/js/app.js"></script>
+  </body>
+</html>
