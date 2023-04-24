@@ -206,9 +206,15 @@ def bootstrap(empt):
         dictt[f"{i}"]=y
         i=i+1
    
-
-    print(dictt) 
-    summarizer=pipeline("summarization")
-    summarized=summarizer(dictt["1"],min_length=200,max_length=250)
-    print(summarized) 
+    moti =0
+    for j in range(0,9):
+        if moti>2:
+            break
+        if len(dictt[f"{j}"]) <3000:
+            continue
+        moti=moti+1
+        chunksz = [dictt[f'j'][i:i+3000] for i in range(0, len(dictt[f'j']), 3000)]
+        summarized=summarizer(chunksz[0],min_length=200,max_length=250)
+        print(summarized) 
+    
     
