@@ -12,6 +12,7 @@ import requests
 from bs4 import BeautifulSoup
 # Create your views here.
 summarizer=pipeline("summarization")
+final=[]
 def home(request):
     return render(request,'home/home.html')
 
@@ -188,6 +189,9 @@ def bootstrap(empt):
     for j in range(0,4):
         url_set.append(empt["articles"][j]["url"])
     
+    
+    
+    print("1jijisjd")
     print(url_set)
     dictt={}
     i=0
@@ -199,22 +203,23 @@ def bootstrap(empt):
             title=soup.find_all('h1')
  
             #  print(cont)
-    if len(cont)>20:
+    if len(cont)>10:
         y=" "
         for con in cont:
             y=y+con.text
         dictt[f"{i}"]=y
         i=i+1
-   
+    print(dictt)
     moti =0
-    for j in range(0,9):
-        if moti>2:
-            break
-        if len(dictt[f"{j}"]) <3000:
+    for j in range(0,1):
+        print(len(dictt[f"{j}"]))
+        # if moti>2:
+        #     break
+        if len(dictt[f"{j}"]) <1500:
             continue
         moti=moti+1
-        chunksz = [dictt[f'j'][i:i+3000] for i in range(0, len(dictt[f'j']), 3000)]
+        chunksz = [dictt[f'{j}'][i:i+1500] for i in range(0, len(dictt[f'{j}']), 1500)]
         summarized=summarizer(chunksz[0],min_length=200,max_length=250)
         print(summarized) 
-    
+        final.append(summarized)
     
