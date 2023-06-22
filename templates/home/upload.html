@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../home/../../static/assets/css/upload.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic&family=Bruno+Ace&family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic&family=Bruno+Ace&family=Quicksand:wght@300;400;500;600;700&family=Raleway:ital,wght@0,100;0,200;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital@1&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital@1&family=Sigmar&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Sigmar&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@200&family=Lobster&family=Sigmar&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Upload</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Kanit&family=Romanesco&family=Sonsie+One&display=swap");
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="/" id="navbar__logo">AGPT</a>
+      </div>
+    </nav>
+
+    <div class="strip-container">
+      <div class="strip-content">
+        <p>
+          This research paper analysis tool allows you to extract valuable
+          information from scientific articles and papers. With our tool, you
+          can quickly and easily identify and extract key information such as
+          chemicals, cells, and diseases mentioned in a paper. This feature is
+          especially useful for researchers who need to quickly identify and
+          categorize information in large volumes of scientific literature.
+          Instead of manually scanning through each paper, our tool does the
+          work for you, extracting relevant information and presenting it in an
+          easy-to-read format. Once the information is extracted, it can be
+          exported into an Excel spreadsheet for further analysis and
+          organization. This allows you to quickly compare and contrast data
+          from different papers, and identify patterns or trends that may not
+          have been immediately apparent. Our tool uses advanced natural
+          language processing techniques to identify and extract relevant
+          information from research papers, saving you time and effort. Whether
+          you're a researcher, scientist, or student, our research paper
+          analysis tool is a valuable resource that can help you stay on top of
+          the latest developments in your field.
+        </p>
+      </div>
+    </div>
+    <div class="upload__container">
+      <div class="upload__container-heading">
+        <h1>Upload your document</h1>
+        <p>[Do make sure file is of the form .pdf]</p>
+      </div>
+      <div class="wrapper">
+        <form action="uploadd" method="POST" enctype="multipart/form-data"> {%csrf_token%}
+          <!-- <input  type="file"  name="document" id= "document"  > -->
+          <div class="choose-file__input">
+            <input type="file" name="document" id= "document" required class="file-temp">
+          </div>
+          <i class="fas fa-cloud-upload-alt"></i>
+          <p>Browse File to Upload</p>
+        
+      </div>
+      <div class="button__container">
+        <button class="button" role="button" type="submit">Upload</button>
+      </div>
+    </div>
+  </form>
+
+    <script src="../../static/assets/js/strip.js"></script>
+  </body>
+</html>
