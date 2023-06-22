@@ -132,3 +132,5 @@ STATICFILES_DIRS = [
 MESSAGE_TAGS={
     messages.ERROR:'danger'
 }
+MEDIA_ROOT = os.path.join(BASE_DIR, 'files')
+MEDIA_URL = '/files/
