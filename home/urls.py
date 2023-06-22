@@ -1,7 +1,6 @@
 from django.contrib import admin
 from django.urls import path,include
 from home import views
-
 urlpatterns = [
     path('',views.home,name='home'),
     path('login',views.loginn,name='login'),
@@ -12,5 +11,6 @@ urlpatterns = [
     path('log',views.log,name='log'),
     path('signup',views.signup,name='signup'),
     path('feedback',views.feedbackk,name='feedback'),
- 
+    path('file',views.files,name="files"),
+    path('uploadd',views.uploadd,name="uploadd")
 ]
